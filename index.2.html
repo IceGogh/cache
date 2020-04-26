@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test cache</title>
+    <link rel="stylesheet" href="http://127.0.0.1:14000/reset" />
+    <link rel="shortcut icon" href="http://127.0.0.1:14000/ico" type="image/x-icon">
+    <style>
+        .bg {
+            width: 800px;
+            height: 200px;
+            background: url('http://127.0.0.1:14000/img1');
+        }
+        .bg2 {
+            background: url('http://127.0.0.1:14000/img2');
+        }
+        img {
+            width: 500px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+</body>
+<script src="http://127.0.0.1:14000/jquery"></script>
+<script>
+    const req = new XMLHttpRequest()
+    req.open('GET', 'http://127.0.0.1:14000/json')
+    req.send()
+</script>
+</html>
