@@ -3,7 +3,6 @@
 *  max-age / Expires 强缓存 
 * last-modified / if-modified-since 协议缓存
 * 强缓存 < 协议缓存优先级
-* E-tag / if-None-Match   优先于 modified
 
 | 浏览器 | 访问方式 | 缓存方式| Status |                  Size                     | Time | 服务器是否监听到 request |
 |:-------|:--------|:--------|:-------|:-----|:-----|:------------------------|
@@ -52,7 +51,7 @@
 * Ctrl + F5 (清空缓存并硬性重新加载 同上(没有访问记录直接url访问))
 * no-cache 并不是说，不准使用缓存，而是需要走接下来的优先级相对较低的另一类--协议缓存。真正决定不用缓存内的资源是将该值定义为 no-store
 * must-revalidate，如果超过了max-age的时间，必须向服务器发送请求，验证资源的有效性
-* no-cache，基本等价于max-age=0，由对比缓存来决定是s否缓存资源
+* no-cache，基本等价于max-age=0，由对比缓存来决定是否缓存资源
 * no-store，真正意义上的不缓存
 * public，所有内容都可以被缓存
 * private，所有内容只有客户端可以缓存，代理服务器不能缓存。默认值
